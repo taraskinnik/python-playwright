@@ -5,7 +5,6 @@ from pages import Login, Channels
 
 
 @pytest.mark.authentication
-@pytest.mark.bookstore
 class TestLogin:
     def test_valid_login(self, page: Page) -> None:
         """Login with valid credentials.
