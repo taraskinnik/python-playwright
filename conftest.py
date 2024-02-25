@@ -6,7 +6,7 @@ from pytest import fixture
 from utilities.api_helpers.api import API
 
 api = API()
-domain: str = "www.demoqa.com"
+domain: str = "https://app.wazzup24.com"
 path: str = "/"
 
 
