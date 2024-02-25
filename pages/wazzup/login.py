@@ -6,23 +6,19 @@ from pages.base import Base
 class Login(Base):
     @property
     def userform(self) -> Locator:
-        # return self.page.locator(".login")
-        return self.page.get_by_role("login")
+        return self.page.locator(".login")
     
     @property
     def password_field(self) -> Locator:
-        # return self.userform.locator(".password")
-        return self.page.get_by_role("password")
+        return self.userform.get_by_label("Password")
 
     @property
     def submit_button(self) -> Locator:
-        # return self.userform.locator(".submit")
-        return self.page.get_by_role("submit")
+        return self.userform.get_by_role("button", name="Log in")
 
     @property
     def username_field(self) -> Locator:
-        # return self.userform.locator(".text")
-        return self.page.get_by_role("text")
+        return self.userform.get_by_label("Email")
 
     def fill_form(self, user: dict) -> None:
         """Fill out the login form.
