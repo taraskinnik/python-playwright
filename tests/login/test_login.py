@@ -1,8 +1,7 @@
 import pytest
 from playwright.sync_api import Page, expect
 
-from pages.wazzup.login import Login
-from pages.wazzup.channels import Channels
+from pages import Login, Channels
 
 
 @pytest.mark.authentication
