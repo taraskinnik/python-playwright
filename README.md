@@ -1,27 +1,9 @@
-# Python Playwright Project
-
-A testing repository using Python 3.9, Pytest, and Playwright.
-
-1. [Tools Used](#tools-used)
-2. [Installation](#installation)
-3. [Running Tests](#running-tests)
-
-### Tools Used
-- Python 3.9
-- Pytest
-- Pytest-Asyncio
-- Pytest-Playwright
-- Playwright
-- Flake8
-- Black
-- Isort
-- Pydocstyle
-- Pipenv
-
 ### Installation
 Converted to Pipenv to remove the dependency on virtualenv and pip. Simply install pipenv (`pip install pipenv`), then run `pipenv --python 3.9`. This will build a new virtual environment. Run `pipenv run shell` to activate the environment. Finally, run `pipenv install` to install all dependencies.
 
 It is likely that I will switch this over to Poetry as I have had great experience with the package. In addition, it uses `pyproject.toml` instead of `Pipfile` or `requirements.txt` for dependency management. 
+
+If something goes wrong try: `playwright install` and `pip install pytest-playwright`
 
 ### Running Tests
 Run the following commands:
