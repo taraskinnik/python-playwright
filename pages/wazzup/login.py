@@ -1,20 +1,28 @@
-from playwright.sync_api._generated import ElementHandle
+from playwright.sync_api._generated import Locator
 
 from pages.base import Base
 
 
 class Login(Base):
     @property
-    def password_field(self) -> ElementHandle:
-        return self.userform.wait_for_selector("#password")
+    def userform(self) -> Locator:
+        # return self.page.locator(".login")
+        return self.page.get_by_role("login")
+    
+    @property
+    def password_field(self) -> Locator:
+        # return self.userform.locator(".password")
+        return self.page.get_by_role("password")
 
     @property
-    def submit_button(self) -> ElementHandle:
-        return self.userform.wait_for_selector("#submit")
+    def submit_button(self) -> Locator:
+        # return self.userform.locator(".submit")
+        return self.page.get_by_role("submit")
 
     @property
-    def username_field(self) -> ElementHandle:
-        return self.userform.wait_for_selector("#text")
+    def username_field(self) -> Locator:
+        # return self.userform.locator(".text")
+        return self.page.get_by_role("text")
 
     def fill_form(self, user: dict) -> None:
         """Fill out the login form.
